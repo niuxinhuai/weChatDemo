@@ -1,0 +1,96 @@
+/* pages/personal/personal.wxss */
+.objectClass{
+  width: 90%;
+  height: 86rpx;
+  /*让文字在当前view垂直剧中，可以使用行高  */
+  line-height: 86rpx;
+  /*设置视图底部线条，加颜色  dotted代表虚线 solid 代表实线*/
+  border-bottom: 1rpx #eeeeee solid;
+  /*保证子视图在同一个水平线内  */
+  display: flex;
+  flex-flow: row;
+  /*
+flex-start（默认值）：左对齐
+flex-end：右对齐
+center： 居中
+space-between：两端对齐，项目之间的间隔都相等。
+space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍
+    */
+  justify-content: space-between;
+
+
+
+}
+.objectClass input{
+  text-align: right;
+  line-height: 86rpx;
+  height: 86rpx;
+  font-size: 35rpx;
+}
+.objectClass text{
+  /*文字大小  */
+  font-size: 35rpx;
+}
+/*性别选择样式  */
+.changeSex{
+  width: 40%;
+  text-align: right;  
+}
+.changeSex label{
+  /*label需要做特殊处理，行内元素给宽高没用，必须改变为行内块元素才可以给宽高起作用  */
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 40%;
+  text-align: center;
+  
+}
+.bottomNormalView{
+  background-color: rgb(239, 239, 239);
+  height: 20rpx;
+  width: 100%;
+  margin-top: -1rpx;
+}
+.normalView{
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: rgb(239, 239, 239);
+  text-align: left;
+  width: 100%;
+  font-size: 30rpx;
+  /*缩进  */
+  text-indent: 24rpx;
+  margin-top: -1rpx;
+}
+textarea{
+  font-size: 33rpx;
+  padding: 20rpx 10rpx;
+  width: 100%;
+  height: 200rpx;
+  line-height: 30rpx;
+  overflow-x: hidden
+}
+button{
+  background-color: orange;
+  width: 100%;
+  border-radius: 0;
+  color: #fff;
+}
+.button-hover{
+  background-color: orange;
+   color: #fff;
+}
+.jobState{
+  width: 400rpx;
+}
+.item_tarea{
+  width: 100%;
+  position: relative;
+  /*英文，数字不会自动换行，需要强制换行  */
+  word-wrap:break-word;
+}
+.item_tarea text{
+  position: absolute;
+  right: 12rpx;
+  bottom: 0;
+}

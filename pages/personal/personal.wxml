@@ -1,0 +1,79 @@
+<!--pages/personal/personal.wxml-->
+<view class="container">
+<!--姓名  -->
+  <view class='objectClass'>
+    <text>{{actualName}}</text>
+    <input placeholder='请输入' maxlength='15' bindinput='nameClick'>{{userName}}</input>
+  </view>
+  <!--性别  -->
+  <view class='objectClass'>
+    <text>{{sex}}</text>
+    <view class='changeSex'>
+      <label style='background-color: {{sexManColor}}' bindtap='setManClick'>男</label>
+      <label style='background-color: {{sexWomenColor}}' bindtap='setWomenClick'>女</label>
+    </view>
+  </view>
+  <!--出生年月  -->
+  <view class='objectClass'>
+    <text>{{birthdayTime}}</text>
+      <picker mode="date" 
+             value="{{date}}" 
+             start="1965-09-01" 
+             end="2020-09-01" 
+             bindchange="bindDateChange" 
+             style='font-size: 35rpx'>
+        <view  style='color: {{birthdayColor}}'>
+          {{birthdayTitle}}
+      </view>
+    </picker>
+  </view>
+  <!--底部灰色视图  -->
+  <view class='bottomNormalView'></view>
+<!--最高学历选择  -->
+  <view class='objectClass'>
+    <text>{{education}}</text>
+     <text bindtap='selectEducation' style='color: {{educationColor}}'>{{educationTitle}}</text> 
+  </view>
+  <!--工作年限选择  -->
+   <view class='objectClass'>
+    <text>{{workYear}}</text>
+    <picker bindchange="bindPickerChange" 
+            value="{{index}}" range="{{array}}">
+        <view style='color: {{workYearColor}};font-size: 35rpx'>
+          {{workYearTitle}}
+        </view>
+    </picker>
+  </view> 
+  <!--底部灰色视图  -->
+  <view class='bottomNormalView'></view>
+  <!--手机号码  -->
+  <view class='objectClass'>
+    <text>{{phoneText}}</text>
+    <input placeholder='请输入' maxlength='11' bindinput='phoneClick'>{{phoneNumber}}</input>
+  </view>
+  <!--联系邮箱  -->
+  <view class='objectClass'>
+    <text>{{emailText}}</text>
+    <input placeholder='请输入' maxlength='100' bindinput='emailClick'>{{emailNumber}}</input>
+  </view>
+  <!--底部灰色视图  -->
+  <view class='bottomNormalView'></view>
+  <!--所在城市  -->
+  <view class='objectClass'>
+    <text>{{cityText}}</text>
+    <text style='color: {{cityColor}};font-size: 35rpx' bindtap='cityClick'>{{chouseCity}}</text>
+  </view>
+  <!--当前状态  -->
+  <view class='objectClass'>
+    <text>{{userText}}</text>
+    <text style='color: {{jobStateColor}};font-size: 35rpx' bindtap='jobStateClick'>{{chouseJobState}}</text>
+  </view>
+  <!--一句话介绍自己  -->
+  <view class='normalView'>一句话介绍自己</view>
+  <view class='item_tarea'>
+    <textarea placeholder='用简短的一句话概括介绍以下您自己吧' maxlength='58' bindinput="bindTextAreaBlur"></textarea>
+    <text>{{oberseverAreaLength}}</text>
+  </view>
+  
+  <button bindtap='comfirmData'>保存</button>
+</view>
